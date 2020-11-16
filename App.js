@@ -24,11 +24,25 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-//making user define components
-const Mydata =()=>{
-  return(
-    <Text>Hello World!</Text>
-  )
+//method based -making user define components
+//const Mydata =()=>{
+ // return(
+  //  <Text>Hello World!</Text>
+ // )
+//}
+//method based -making user define components
+class Mydata extends React.Component{
+  render(){
+    return(
+      //<Text>Hello World!</Text> //static 
+
+      <View>
+      <Text>{this.props.name}</Text> 
+      <Text>{this.props.status}</Text>
+      </View>
+  
+    )
+  }
 }
 
 class App extends React.Component{
@@ -47,6 +61,7 @@ render(){
           </View>
     })
   }
+  <Mydata name="ravi" status="coder"/>
     </View>
   );
 }
