@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
 } from 'react-native';
 
 import {
@@ -46,22 +47,38 @@ class Mydata extends React.Component{
 }
 
 class App extends React.Component{
+  state = {
+    name:"mukesh",
+    status:"dancer"
+  }
+  handleST(){
+    this.setState(
+      {
+        name:"Ravi"
+      }
+    )
+  }
 render(){
 
-  const arr =['Eat', 'Sleep', 'Code'];
+ // const arr =['Eat', 'Sleep', 'Code'];
 
   return(
     <View style = {styles.container}>
-    {/* <Text> {Math.E}</Text> */}
-    {
+    {/* <Text> {Math.E}</Text> 
+     {
       arr.map(data=>{
         return <View>
           <Text> {data}</Text> 
-          {/*<Mydata /> calling user define components*/}
+          {/*<Mydata /> calling user define components}
           </View>
     })
   }
   <Mydata name="ravi" status="coder"/>
+    */}
+   
+  <Text>{this.state.name}</Text> 
+  <Text>{this.state.status}</Text> 
+  <Button title="CLICK ME" onPress={this.handleST.bind(this)} />
     </View>
   );
 }
