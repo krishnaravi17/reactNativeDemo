@@ -76,7 +76,7 @@ render(){
   <Mydata name="ravi" status="coder"/>
     */}
    
-  <Text>{this.state.name}</Text> 
+  <Text style={styles.text}>{this.state.name}</Text> 
   <Text>{this.state.status}</Text> 
   <Button title="CLICK ME" onPress={this.handleST.bind(this)} />
     </View>
@@ -90,6 +90,11 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     backgroundColor:'#fff',
+    alignItems:'center',
+    justifyContent:'center',
+  },
+  text:{
+    backgroundColor:'skyblue',
     alignItems:'center',
     justifyContent:'center',
   },
